@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() , BarFragment.OnSelectOption {
             2 -> {
                 "Wiii"
             }
-            3 -> {
-                "Bye"
-            }
             else -> {
                 "Fuck!"
             }
@@ -32,9 +29,8 @@ class MainActivity : AppCompatActivity() , BarFragment.OnSelectOption {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var barFragment = BarFragment.newInstace(
-            "Op1",
-            "Op2",
-            "Op3"
+            "PREV",
+            "NEXT"
         )
         if (savedInstanceState == null) {
             supportFragmentManager

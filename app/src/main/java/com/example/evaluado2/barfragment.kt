@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.bar_fragment.view.*
-import kotlinx.android.synthetic.main.content_fragment.*
 import java.lang.RuntimeException
 
 val ARG_ACTION_1: String = "action_1"
@@ -22,7 +21,7 @@ class BarFragment : Fragment() {
 
     companion object {
 
-        fun newInstace(action1: String, action2: String,action3: String) =
+        fun newInstace(action1: String, action2: String) =
             BarFragment().apply {
                 arguments  = Bundle().apply {
                     putString(ARG_ACTION_1,action1)
@@ -58,7 +57,7 @@ class BarFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?) =
-        inflater.inflate(R.layout.content_fragment,
+        inflater.inflate(R.layout.bar_fragment,
             container, false).apply {
             prev.apply {
                 text = action1
